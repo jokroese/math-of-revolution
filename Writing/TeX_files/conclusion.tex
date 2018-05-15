@@ -1,0 +1,24 @@
+\chapter{Conclusion}\label{ch:conclusion}
+\section{Lessons from this paper}
+Through this paper we have explored how mathematics can be used to model complex social systems from the evolution of cooperation to economic inequality. In particular we have focused on how to represent notions of agency and interrelations to develop two models of revolution inspired by mathematical epidemiology. The first compartmental model was able to provide many insights into the phenomena. However its clear restrictions showed the necessity of a more complex model. This led to the development of an ABM that could account for network dynamics and the inherent stochasticity of real life.
+
+\section{Further work}
+\subsection{Interesting theoretical extensions}
+%This provides a suggestion for the general direction of research in this area. However there are also many smaller, lower-hanging fruit that would provide stimulating papers.
+There are many possible routes for expanding this model. One possibility would be to more thoroughly investigate the role of supernodes in catalysing revolutions. For example Mohamed Bouazizi's highly symbolic self-immolation sparked the Tunisian revolution. More generally, people such as journalists and politicians have a unique reach and ability to spread a message. Modelling this would involve more careful study of how properties of scale-free graphs affect the revolution model as well as considering a probability distribution over the agents' $\beta$ values.\\
+\\
+Another option is to introduce the need for multiple contacts to be made before people truly take an idea on. This is based on the observation that social influence works quite differently to how diseases spread. In a paper on social contagion Thomas House justifies this approach\cite{thomas-house}:
+\begin{quote}
+[Experimental studies show] there is significant evidence that the form of ‘infection’ in social influence is different to that in a biological epidemic. The important difference is the number of exposures to infection that an individual must receive before becoming infected: in biological infection only one source of infection is required for a non-zero probability of infection, whereas in social influence multiple sources are required.
+\end{quote}
+Dodds and Watts have already built a model adopting the SIS model to this form of infection\cite{dodds-watts}. Future compartmental models of revolution should seek to accommodate a similar approach. It would also be both interesting and simple to adopt this idea into future ABMs too.\\
+\\
+A more data science flavoured extension would involve attempts to find more finely grained time series data on a revolution than currently available datasets\cite{NAVCO-2.0}. One interesting option would be to analyse sentiment data on Twitter during a revolution such as the Arab Spring. Whilst this is potentially very messy data it could be revealing. There is also some debate about the extent to which the Arab Spring was a `social media revolution'\cite{egypt-five-years}. A quantitative analysis of Twitter data throughout the Arab Spring would shed a light on this question.
+%\\
+%\\
+%Specifically to ABMs, it would be revealing to perform this on a much larger network to more accurately model a population. To do so the algorithm would have to be improved. One way to do so would be to adopt a Hastings style algorithm.
+
+\subsection{A suggestion for the general direction for the mathematical study of revolution}
+The rigorous approach of Chenoweth's \textit{Why Civil Resistance Works: The Strategic Logic of Nonviolent Conflict}\cite{logic-non-violence} provides an important contribution to the quantitative analysis of revolutions. This text and accompanying dataset give a firm understanding of what the majority of successful revolutions in the last century have looked like: non-violent, democratic and broad-based. However, the text mainly offers a \textit{how}. The next step is to offer a \textit{why}.\\
+\\
+The goal of quantitative revolutionary research right now should be to account for these statistical findings. I believe a strong approach to explain their results theoretically is to pursue an epidemiologically-inspired route. The obvious next step in this direction would be to create a more nuanced ABM which is `tuned' to the data provided in the NAVCO dataset\cite{NAVCO-2.0}. This would involve including parameters such as the regime's legitimacy and the support of foreign states for the revolutionary campaign as inputs. In this way a desirable model would fuse the epidemiologically inspired models introduced in this paper with the global parameters present in Epstein's civil violence model\cite{epstein} and the hard data of the NAVCO dataset.

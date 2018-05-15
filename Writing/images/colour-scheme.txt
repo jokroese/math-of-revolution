@@ -1,0 +1,8 @@
+Colours:
+
+Class, colour, websafe RGB
+
+Susceptible, green, #ADD694
+Exposed, yellow, #FFCD47
+Infected, pink, #F2728C
+Recovered, blue, #67B8C7

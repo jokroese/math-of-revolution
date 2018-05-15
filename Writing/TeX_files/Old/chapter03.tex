@@ -1,0 +1,33 @@
+\chapter{A Compartmental Model of Political Revolution}
+In many ways a revolution is like an infectious disease. Though the mechanics of transmission are inherently different, there are notable parallels. The idea of it spreads through the population with an origin, hotspots and occasional eruptive dynamics.\\
+
+There is an established link between meme propogation and infectious disease\cite{meme-epidemic}. Here we use `meme' by Richard Dawkins' definition of a cultural entity that appears to exhibit self-replication\cite{selfish-gene}. At the centre of a revolution is a `meme', a self-replicating thought that inspires change against the regime. However, a revolutionary meme is a meme of a special kind in that it carries a risk to those who actively disseminate the meme. The reason to not share a conventional meme is usually simply apathy. However, a reason not to share a political meme is fear of imprisonment, social isolation and worse. There is thus an extra disencentive not to share the meme as doing so risks negative personal repurcusions from the authorities.\\
+
+Research has shown that conventional memes replicate very similarly to infectious disease and can borrow the same models and fit the parameters to datasets of memes\cite{meme-epidemic}. In this model, the transmission parameter is given as a constant. The susceptible agent consider whether they want to share the meme and then either does with probability $\alpha$ or doesn't with probability $1-\alpha$. Note that there they do not need to look outside of themselves; it does not depend on the makeup of the wider population of any exterior consideration. This decision can easily be incorporated into the transmitability constant of standard epdemiological models.\\
+
+Revolutionary memes however involve more considerations. A susceptible agent sees the meme and is either inclined to spread it or not. This is identical to the general meme case. However, suppose they are inclined to spread it. At this point it differs. Having done the same personal considerations, they now have the external consideratinos: what are teh chances that sharing this will increase the probability of significant regime change? How many other people are actively sharing this? What are the chances I'll be caught for sharing this? If I am caught, will I be put in jail? If so, for how long? To include these considerations, we need a model that goes beyond the standard epidemiological models to incorporate a non-constant transmitability parameter that depends on the population demographic\footnote{Some epidemiological models do have non-constant transmitability constants. The general Kermack-McKendrick epidemic model includes factors that depend on how long the agent has the infection\cite{kermack-mckendrick}. However, these are factors belonging \textit{to} the agent and are not exterior to it.}.\\
+
+We will start by analysing a special case of the Kermack–McKendrick epidemic model known as the SIR model and apply it to general memes. We will then extend the model by splitting one class, infected, into two: lapsed infected (carriers) and active infected. We will then introduce a non-constant transmittability constant and allow movement between the two infected classes.\\
+
+These will all be continuous, deterministic models. This assumption is acceptable when the populations and compartments are all relatively large. However, as in epidemics, it is a poor approximation when the `infected' (read: `revolutionary') population is small\cite{models-epidemiology}. Thus after developing the continuous deterministic model, we will then explore a branching model that can incorporate this stochasticity.\\
+
+
+We will then look at network models that will be able to provide even greater nuance.
+
+\section{SIR model}
+\paragraph{Introduction}
+
+
+How it works, graphic of the compartments, equations\\
+Solve model for when revolution happens
+\section{My SIIR model}
+Split $I$ into two parts: $I_1$ infected and do not spread $I_2$ and do spread\\
+Show can be written by absorbing $I_1$ into $R$ so anyone infected but not acting is effectively removed.
+\section{SIIR with sleeping revolutionaries}
+Allow movement between $I_1,I_2$
+\subsection{With linear movement between revolutionaries}
+
+\subsection{With non-linear movement between revolutionaries}
+
+\section{SIIR with stochasticity}
+These models have been useful and relatively easy to analyse. However revolutions are, as in human life and probably more so, sensitive to random occurences. An external war is declared, a politician falls ill or the next would-be revolutionary forgets their newly formed manifesto on the way back form the pub. To account for this we need either branching processes or stochastic differential equations.

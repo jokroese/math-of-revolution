@@ -1,0 +1,1133 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     48173,       1123]
+NotebookOptionsPosition[     46403,       1059]
+NotebookOutlinePosition[     47046,       1084]
+CellTagsIndexPosition[     47003,       1081]
+WindowTitle->SIR Epidemic Dynamics - Source
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["SIR Epidemic Dynamics", "Section",
+ CellFrame->{{0, 0}, {0, 0}},
+ ShowCellBracket->False,
+ FontColor->RGBColor[0.597406, 0, 0.0527047]],
+
+Cell[BoxData[
+ GraphicsBox[RasterBox[CompressedData["
+1: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
+FP/69esnAAAAAAAAAAAAwM74B4thROM=
+   "], {{0, 0}, {1800, 25}}, {0, 255},
+   ColorFunction->RGBColor],
+  ImageSize->{1800, 25},
+  PlotRange->{{0, 1800}, {0, 25}}]], "Section",
+ CellFrame->{{0, 0}, {0, 0}},
+ ShowCellBracket->False],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"maxT", "=", "150"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"seqn", "[", "\[Alpha]_", "]"}], ":=", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"s", "'"}], "[", "t", "]"}], "\[Equal]", 
+     RowBox[{
+      RowBox[{"-", "\[Alpha]"}], " ", 
+      RowBox[{"s", "[", "t", "]"}], " ", 
+      RowBox[{"i", "[", "t", "]"}]}]}], ")"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"ieqn", "[", 
+    RowBox[{"\[Alpha]_", ",", "\[Beta]_"}], "]"}], ":=", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"i", "'"}], "[", "t", "]"}], "\[Equal]", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"\[Alpha]", " ", 
+         RowBox[{"s", "[", "t", "]"}]}], "-", "\[Beta]"}], ")"}], " ", 
+      RowBox[{"i", "[", "t", "]"}]}]}], ")"}]}], ";"}]}], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{
+  3.35696210375764*^9, 3.43448438928125*^9, 3.4344855078125*^9, {
+   3.4347376499163575`*^9, 3.4347376510914755`*^9}},
+ CellID->290879053],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", "soln", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"immune", "=", 
+        RowBox[{"Clip", "[", 
+         RowBox[{"immune", ",", 
+          RowBox[{"{", 
+           RowBox[{"0", ",", "0.9"}], "}"}]}], "]"}]}], ";", 
+       RowBox[{"hint", "=", 
+        RowBox[{"Clip", "[", 
+         RowBox[{"hint", ",", 
+          RowBox[{"{", 
+           RowBox[{"1", ",", "maxT"}], "}"}]}], "]"}]}], ";", 
+       RowBox[{"vint", "=", 
+        RowBox[{"Clip", "[", 
+         RowBox[{"vint", ",", 
+          RowBox[{"{", 
+           RowBox[{"0.05", ",", "1"}], "}"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"hpos", "=", 
+        RowBox[{"Clip", "[", 
+         RowBox[{"hpos", ",", 
+          RowBox[{"{", 
+           RowBox[{"0", ",", 
+            RowBox[{"maxT", "-", "hint"}]}], "}"}]}], "]"}]}], ";", 
+       RowBox[{"vpos", "=", 
+        RowBox[{"Clip", "[", 
+         RowBox[{"vpos", ",", 
+          RowBox[{"{", 
+           RowBox[{"0", ",", 
+            RowBox[{"1", "-", "vint"}]}], "}"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"immune", "+", "infect"}], ")"}], ">", "1.0"}], ",", 
+         RowBox[{"infect", "=", 
+          RowBox[{"1.0", "-", "immune"}]}]}], "]"}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"soln", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"NDSolve", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"seqn", "[", 
+               RowBox[{"#", "*", "\[Gamma]"}], "]"}], ",", 
+              RowBox[{"ieqn", "[", 
+               RowBox[{
+                RowBox[{"#", "*", "\[Gamma]"}], ",", "#"}], "]"}], ",", 
+              RowBox[{
+               RowBox[{"s", "[", "0", "]"}], "\[Equal]", 
+               RowBox[{"1.0", "-", "immune", "-", "infect"}]}], ",", 
+              RowBox[{
+               RowBox[{"i", "[", "0", "]"}], "\[Equal]", "infect"}]}], "}"}], 
+            ",", 
+            RowBox[{"{", 
+             RowBox[{"s", ",", "i"}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"t", ",", "0", ",", "maxT"}], "}"}]}], "]"}], "&"}], "[", 
+         RowBox[{"1", "/", "Duration"}], "]"}]}], ";", " ", 
+       RowBox[{"(*", " ", 
+        RowBox[{
+         RowBox[{"\[Beta]", "=", 
+          RowBox[{"1", "/", "Duration"}]}], ";", " ", 
+         RowBox[{"\[Alpha]", "=", 
+          RowBox[{
+           RowBox[{"\[Beta]", "*", "\[Gamma]"}], "=", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"1", "/", "Duration"}], ")"}], "*", "\[Gamma]"}]}]}]}], 
+        " ", "*)"}], "\[IndentingNewLine]", 
+       RowBox[{"Plot", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"s", "[", "t", "]"}], "/.", 
+            RowBox[{"soln", "[", 
+             RowBox[{"[", 
+              RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ",", 
+           RowBox[{
+            RowBox[{"i", "[", "t", "]"}], "/.", 
+            RowBox[{"soln", "[", 
+             RowBox[{"[", 
+              RowBox[{"1", ",", "2"}], "]"}], "]"}]}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"t", ",", "hpos", ",", 
+           RowBox[{"hpos", "+", "hint"}]}], "}"}], "\[IndentingNewLine]", ",", 
+         RowBox[{"AxesOrigin", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{"hpos", ",", "vpos"}], "}"}]}], ",", 
+         RowBox[{"PlotRange", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"hpos", ",", 
+              RowBox[{"hpos", "+", "hint"}]}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"vpos", ",", 
+              RowBox[{"vpos", "+", "vint"}]}], "}"}]}], "}"}]}], ",", 
+         RowBox[{"PlotStyle", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"Lighter", "[", "Blue", "]"}], ",", 
+              RowBox[{"Thickness", "[", "0.007", "]"}]}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"Lighter", "[", "Red", "]"}], ",", 
+              RowBox[{"Thickness", "[", "0.007", "]"}]}], "}"}]}], "}"}]}], 
+         ",", 
+         RowBox[{"AspectRatio", "\[Rule]", "Full"}], ",", " ", 
+         RowBox[{"ImageSize", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{"350", ",", "300"}], "}"}]}], ",", 
+         RowBox[{"ImagePadding", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"40", ",", "10"}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"40", ",", "10"}], "}"}]}], "}"}]}], ",", 
+         RowBox[{"FrameLabel", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{
+           "\"\<time (days)\>\"", ",", "\"\<proportion of population\>\""}], 
+           "}"}]}], ",", 
+         RowBox[{"Frame", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"True", ",", "False"}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"True", ",", "False"}], "}"}]}], "}"}]}]}], 
+        "\[IndentingNewLine]", "]"}]}]}], "\[IndentingNewLine]", "]"}], 
+    "\[IndentingNewLine]", 
+    RowBox[{"(*", " ", 
+     RowBox[{"manipulation", " ", "controls"}], " ", "*)"}], 
+    "\[IndentingNewLine]", ",", 
+    RowBox[{"Style", "[", 
+     RowBox[{"\"\<disease information\>\"", ",", "Bold"}], "]"}], 
+    "\[IndentingNewLine]", ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"\[Gamma]", ",", "5", ",", "\"\<contact number\>\""}], "}"}], 
+      ",", "0", ",", "20", ",", "0.05", ",", 
+      RowBox[{"ImageSize", "\[Rule]", "Tiny"}], ",", 
+      RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], 
+    "\[IndentingNewLine]", ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"Duration", ",", "10", ",", "\"\<duration of infection\>\""}], 
+       "}"}], ",", "0.5", ",", "20", ",", "0.5", ",", " ", 
+      RowBox[{"ImageSize", "\[Rule]", "Tiny"}], ",", 
+      RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], 
+    "\[IndentingNewLine]", ",", "Delimiter", "\[IndentingNewLine]", ",", 
+    RowBox[{"Style", "[", 
+     RowBox[{"\"\<population information\>\"", ",", "Bold"}], "]"}], 
+    "\[IndentingNewLine]", ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"immune", ",", "0", ",", "\"\<initially immune\>\""}], "}"}], 
+      ",", "0", ",", "0.9", ",", "0.01", ",", 
+      RowBox[{"ImageSize", "\[Rule]", "Tiny"}], ",", 
+      RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], 
+    "\[IndentingNewLine]", ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"infect", ",", "0.01", ",", "\"\<initially infected\>\""}], 
+       "}"}], ",", "0", ",", 
+      RowBox[{"1", "-", "immune"}], ",", "0.01", ",", 
+      RowBox[{"ImageSize", "\[Rule]", "Tiny"}], ",", 
+      RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], 
+    "\[IndentingNewLine]", ",", "Delimiter", "\[IndentingNewLine]", ",", 
+    RowBox[{"Style", "[", 
+     RowBox[{"\"\<time scale\>\"", ",", "Bold"}], "]"}], 
+    "\[IndentingNewLine]", ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"hint", ",", "maxT", ",", "\"\<interval\>\""}], "}"}], ",", 
+      "1", ",", "maxT", ",", "0.1", ",", 
+      RowBox[{"ImageSize", "\[Rule]", "Tiny"}]}], "}"}], 
+    "\[IndentingNewLine]", ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"hpos", ",", "0", ",", "\"\<window\>\""}], "}"}], ",", "0", 
+      ",", 
+      RowBox[{"maxT", "-", "hint"}], ",", "0.1", ",", 
+      RowBox[{"ImageSize", "\[Rule]", "Tiny"}]}], "}"}], 
+    "\[IndentingNewLine]", ",", "Delimiter", "\[IndentingNewLine]", ",", 
+    RowBox[{"Style", "[", 
+     RowBox[{"\"\<proportion scale\>\"", ",", "Bold"}], "]"}], 
+    "\[IndentingNewLine]", ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"vint", ",", "1", ",", "\"\<interval\>\""}], "}"}], ",", 
+      "0.05", ",", "1", ",", "0.01", ",", 
+      RowBox[{"ImageSize", "\[Rule]", "Tiny"}]}], "}"}], 
+    "\[IndentingNewLine]", ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"vpos", ",", "0", ",", "\"\<window\>\""}], "}"}], ",", "0", 
+      ",", 
+      RowBox[{"1", "-", "vint"}], ",", "0.01", ",", 
+      RowBox[{"ImageSize", "\[Rule]", "Tiny"}]}], "}"}], 
+    "\[IndentingNewLine]", ",", 
+    RowBox[{"ControlPlacement", "\[Rule]", "Left"}], ",", 
+    RowBox[{"SaveDefinitions", "\[Rule]", "True"}], ",", 
+    RowBox[{"TrackedSymbols", "\[Rule]", "Manipulate"}], ",", 
+    RowBox[{"AutorunSequencing", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", "2", ",", "3", ",", "4", ",", "5", ",", "7"}], 
+      "}"}]}]}], "]"}], " "}]], "Input",
+ CellChangeTimes->{
+  3.35696210375764*^9, 3.4344832291875*^9, 3.434484410359375*^9, 
+   3.43448515165625*^9, 3.4344855241875*^9, 3.4344863063125*^9, {
+   3.4347376753959055`*^9, 3.4347377989942636`*^9}, {3.434989243963125*^9, 
+   3.434989262900625*^9}, {3.434989338494375*^9, 3.43498936279125*^9}, {
+   3.434989542244375*^9, 3.434989594588125*^9}, {3.434989625556875*^9, 
+   3.434989627338125*^9}, {3.434989718338125*^9, 3.43498972004125*^9}, {
+   3.434989803900625*^9, 3.434989879885*^9}, {3.4349899315725*^9, 
+   3.43498996776*^9}, {3.434990095869375*^9, 3.434990120775625*^9}, {
+   3.43499063401*^9, 3.43499064576*^9}, {3.434990686838125*^9, 
+   3.434990733244375*^9}, {3.43499501935375*^9, 3.434995041306875*^9}, {
+   3.434995161619375*^9, 3.43499520072875*^9}, {3.434995406806875*^9, 
+   3.434995479994375*^9}, {3.43499562354125*^9, 3.434995629150625*^9}, {
+   3.4353357950063753`*^9, 3.435335816212496*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`Duration$$ = 10, $CellContext`hint$$ = 
+    150, $CellContext`hpos$$ = 0, $CellContext`immune$$ = 
+    0, $CellContext`infect$$ = 0.01, $CellContext`vint$$ = 
+    1, $CellContext`vpos$$ = 0, $CellContext`\[Gamma]$$ = 5, Typeset`show$$ = 
+    True, Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[
+       Style["disease information", Bold]], 
+      Manipulate`Dump`ThisIsNotAControl}, {{
+       Hold[$CellContext`\[Gamma]$$], 5, "contact number"}, 0, 20, 0.05}, {{
+       Hold[$CellContext`Duration$$], 10, "duration of infection"}, 0.5, 20, 
+      0.5}, {
+      Hold[
+       Style["population information", Bold]], 
+      Manipulate`Dump`ThisIsNotAControl}, {{
+       Hold[$CellContext`immune$$], 0, "initially immune"}, 0, 0.9, 0.01}, {{
+       Hold[$CellContext`infect$$], 0.01, "initially infected"}, 0, 
+      Dynamic[1 - $CellContext`immune$$], 0.01}, {
+      Hold[
+       Style["time scale", Bold]], Manipulate`Dump`ThisIsNotAControl}, {{
+       Hold[$CellContext`hint$$], 150, "interval"}, 1, 150, 0.1}, {{
+       Hold[$CellContext`hpos$$], 0, "window"}, 0, 
+      Dynamic[$CellContext`maxT - $CellContext`hint$$], 0.1}, {
+      Hold[
+       Style["proportion scale", Bold]], Manipulate`Dump`ThisIsNotAControl}, {{
+       Hold[$CellContext`vint$$], 1, "interval"}, 0.05, 1, 0.01}, {{
+       Hold[$CellContext`vpos$$], 0, "window"}, 0, 
+      Dynamic[1 - $CellContext`vint$$], 0.01}}, Typeset`size$$ = {
+    350., {148., 152.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = False, $CellContext`\[Gamma]$61835$$ = 
+    0, $CellContext`Duration$61836$$ = 0, $CellContext`immune$61837$$ = 
+    0, $CellContext`infect$61838$$ = 0, $CellContext`hint$61839$$ = 
+    0, $CellContext`hpos$61840$$ = 0, $CellContext`vint$61841$$ = 
+    0, $CellContext`vpos$61842$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`Duration$$ = 10, $CellContext`hint$$ = 
+        150, $CellContext`hpos$$ = 0, $CellContext`immune$$ = 
+        0, $CellContext`infect$$ = 0.01, $CellContext`vint$$ = 
+        1, $CellContext`vpos$$ = 0, $CellContext`\[Gamma]$$ = 5}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`\[Gamma]$$, $CellContext`\[Gamma]$61835$$, 0], 
+        Hold[$CellContext`Duration$$, $CellContext`Duration$61836$$, 0], 
+        Hold[$CellContext`immune$$, $CellContext`immune$61837$$, 0], 
+        Hold[$CellContext`infect$$, $CellContext`infect$61838$$, 0], 
+        Hold[$CellContext`hint$$, $CellContext`hint$61839$$, 0], 
+        Hold[$CellContext`hpos$$, $CellContext`hpos$61840$$, 0], 
+        Hold[$CellContext`vint$$, $CellContext`vint$61841$$, 0], 
+        Hold[$CellContext`vpos$$, $CellContext`vpos$61842$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      Module[{$CellContext`soln$}, $CellContext`immune$$ = 
+         Clip[$CellContext`immune$$, {0, 0.9}]; $CellContext`hint$$ = 
+         Clip[$CellContext`hint$$, {
+           1, $CellContext`maxT}]; $CellContext`vint$$ = 
+         Clip[$CellContext`vint$$, {0.05, 1}]; $CellContext`hpos$$ = 
+         Clip[$CellContext`hpos$$, {
+           0, $CellContext`maxT - $CellContext`hint$$}]; $CellContext`vpos$$ = 
+         Clip[$CellContext`vpos$$, {0, 1 - $CellContext`vint$$}]; 
+        If[$CellContext`immune$$ + $CellContext`infect$$ > 
+          1., $CellContext`infect$$ = 
+          1. - $CellContext`immune$$]; $CellContext`soln$ = (NDSolve[{
+            $CellContext`seqn[# $CellContext`\[Gamma]$$], 
+            $CellContext`ieqn[# $CellContext`\[Gamma]$$, #], $CellContext`s[
+             0] == 1. - $CellContext`immune$$ - $CellContext`infect$$, \
+$CellContext`i[
+             0] == $CellContext`infect$$}, {$CellContext`s, $CellContext`i}, \
+{$CellContext`t, 0, $CellContext`maxT}]& )[1/$CellContext`Duration$$]; Plot[{
+           ReplaceAll[
+            $CellContext`s[$CellContext`t], 
+            Part[$CellContext`soln$, 1, 1]], 
+           ReplaceAll[
+            $CellContext`i[$CellContext`t], 
+            
+            Part[$CellContext`soln$, 1, 
+             2]]}, {$CellContext`t, $CellContext`hpos$$, $CellContext`hpos$$ + \
+$CellContext`hint$$}, 
+          AxesOrigin -> {$CellContext`hpos$$, $CellContext`vpos$$}, 
+          PlotRange -> {{$CellContext`hpos$$, $CellContext`hpos$$ + \
+$CellContext`hint$$}, {$CellContext`vpos$$, $CellContext`vpos$$ + \
+$CellContext`vint$$}}, PlotStyle -> {{
+             Lighter[Blue], 
+             Thickness[0.007]}, {
+             Lighter[Red], 
+             Thickness[0.007]}}, AspectRatio -> Full, ImageSize -> {350, 300},
+           ImagePadding -> {{40, 10}, {40, 10}}, 
+          FrameLabel -> {"time (days)", "proportion of population"}, 
+          Frame -> {{True, False}, {True, False}}]], "Specifications" :> {
+        Style[
+        "disease information", 
+         Bold], {{$CellContext`\[Gamma]$$, 5, "contact number"}, 0, 20, 0.05, 
+         ImageSize -> Tiny, Appearance -> 
+         "Labeled"}, {{$CellContext`Duration$$, 10, "duration of infection"}, 
+         0.5, 20, 0.5, ImageSize -> Tiny, Appearance -> "Labeled"}, Delimiter, 
+        Style[
+        "population information", 
+         Bold], {{$CellContext`immune$$, 0, "initially immune"}, 0, 0.9, 0.01,
+          ImageSize -> Tiny, Appearance -> 
+         "Labeled"}, {{$CellContext`infect$$, 0.01, "initially infected"}, 0, 
+         
+         Dynamic[1 - $CellContext`immune$$], 0.01, ImageSize -> Tiny, 
+         Appearance -> "Labeled"}, Delimiter, 
+        Style[
+        "time scale", Bold], {{$CellContext`hint$$, 150, "interval"}, 1, 150, 
+         0.1, ImageSize -> Tiny}, {{$CellContext`hpos$$, 0, "window"}, 0, 
+         Dynamic[$CellContext`maxT - $CellContext`hint$$], 0.1, ImageSize -> 
+         Tiny}, Delimiter, 
+        Style[
+        "proportion scale", Bold], {{$CellContext`vint$$, 1, "interval"}, 
+         0.05, 1, 0.01, ImageSize -> 
+         Tiny}, {{$CellContext`vpos$$, 0, "window"}, 0, 
+         Dynamic[1 - $CellContext`vint$$], 0.01, ImageSize -> Tiny}}, 
+      "Options" :> {
+       ControlPlacement -> Left, TrackedSymbols -> Manipulate, 
+        AutorunSequencing -> {1, 2, 3, 4, 5, 7}}, 
+      "DefaultOptions" :> {ControllerLinking -> True}],
+     ImageSizeCache->{616., {176., 181.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    Initialization:>(({$CellContext`soln = {{$CellContext`s -> 
+           InterpolatingFunction[{{0., 150.}}, {
+             3, 3, 1, {120}, {4}, 0, 0, 0, 0}, CompressedData["
+1:eJxFk3sw1AkAxzc7e5FXbZ5d3LKik/e7Xfp97UMWixZ5RHa9rqK8utrKNbqm
+zqLlPK5WxViVyN5Jt2QYudszUimOjW40SHPojk2TlGLupmvmvjPf+czn+//X
+KilTkKpFIpHW/Fsx6f+8Kcrpq3Q+SvzH7z7xPPF2xji6Obn2k9cTYgZnfR3v
+N+Ldx32QaP1Zx7ZEPkrk5q+8Pjg5Tjw/LVeLl+eJXnpyjIXWEnGJsshdPbtK
+3M5VyTQUMupSitcL736Gw3cMb/D268H6XJ/cnLIBhQzdLKl6I15Nh/iRr5lg
+T6V0nfiIOVSsgZG/AzaDMyejR1ZaYur+zban2TTY1P6QsEFmhZQjJ8jcbmtc
+DRY2iKfp+JPGDWsy2AKWzdNDpRm2qLH7Wnr4nh0+2Ov/GLP1S8Q6Xe33PWuP
+Vle/OdrzbaB6qvUoLEdk+hx0mK1xwgMmJaR/xRkVNQ+VowoXsGureu7Fu2JB
+nqbu1HVDvn7cu/EqNxiK+RZke3dUP4O/bbs7HPgeqbxAD3S02UkyRjwQZP25
+oiTNE0+KDQZbFj1hlWjNJl32wj5XLyWf441mcpDdxb+88VadIJsp8wGuZ+t6
+Mbaj4PiZb05PbsdAiEwzUMCA2RcKkaULE4kL3UPpI0zUq4a57Sd9YVFhFOPl
+7YfylMgDtzR+0PGsyHO5vgP5lGGpQkjg/QtJeKUe4DXU8GRoH5Dd0ZdE7QGO
+aU/1vHTyx6moD1sfXfCHRG5crNBi4XuNk6Yog4Uq30DBgccsyCUiZSDYaHx8
+3MyukY0WesUJihEHZdSxm9N1HOSusZnpc+ci4mW6ZZOKC/fxW5HSiAAYPXxf
+mDUVgNed7F8EuTsxfKNoyYMcCGXVkKNpeSD0zUT2nvE8pFbO20ZsCUIXNY+e
+PR8Ek1IdWklbMDL1z29W5Iegt9DG/D6PD5p2i/EsNRTiMwR17VgoVOxNXNNH
+YVh7arljoygcjhNfqS/+EQ4BoZ6nR+6CuJql3dS/C5dXfrLy2CmAKt6C2dkt
+wExHYSSHEQFaayvz18EIxDQ/s8b+SJQ2GqzrIkXh7hXGAvNCFEg1aaPtzrvh
+Iyu74927G1nlXdeUe6Oh/y1fGWsWg4asMdXKYAy4iem/1xbFYpK/PMHlxuGk
+r0QzuxqHTdvMVs/d3oNW83o9t5x4jGhCHSROCVjqeRM88SIBppeq073r98In
+J6BImpwIB5uj6leGQvgaBqdaHhIiZNlykfdACP6cyLaZLULoxJVokw4Rwoam
+C/LcklA/m8vZcSwJH0/bnYR/ADYVnf0=
+             "], {
+             Developer`PackedArrayForm, {0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 
+              20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 
+              52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 80, 82, 
+              84, 86, 88, 90, 92, 94, 96, 98, 100, 102, 104, 106, 108, 110, 
+              112, 114, 116, 118, 120, 122, 124, 126, 128, 130, 132, 134, 136,
+               138, 140, 142, 144, 146, 148, 150, 152, 154, 156, 158, 160, 
+              162, 164, 166, 168, 170, 172, 174, 176, 178, 180, 182, 184, 186,
+               188, 190, 192, 194, 196, 198, 200, 202, 204, 206, 208, 210, 
+              212, 214, 216, 218, 220, 222, 224, 226, 228, 230, 232, 234, 236,
+               238, 240}, CompressedData["
+1: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
+iZT1NaM08v/RkNhc
+              "]}, {Automatic}], $CellContext`i -> 
+           InterpolatingFunction[{{0., 150.}}, {
+             3, 3, 1, {120}, {4}, 0, 0, 0, 0}, CompressedData["
+1:eJxFk3sw1AkAxzc7e5FXbZ5d3LKik/e7Xfp97UMWixZ5RHa9rqK8utrKNbqm
+zqLlPK5WxViVyN5Jt2QYudszUimOjW40SHPojk2TlGLupmvmvjPf+czn+//X
+KilTkKpFIpHW/Fsx6f+8Kcrpq3Q+SvzH7z7xPPF2xji6Obn2k9cTYgZnfR3v
+N+Ldx32QaP1Zx7ZEPkrk5q+8Pjg5Tjw/LVeLl+eJXnpyjIXWEnGJsshdPbtK
+3M5VyTQUMupSitcL736Gw3cMb/D268H6XJ/cnLIBhQzdLKl6I15Nh/iRr5lg
+T6V0nfiIOVSsgZG/AzaDMyejR1ZaYur+zban2TTY1P6QsEFmhZQjJ8jcbmtc
+DRY2iKfp+JPGDWsy2AKWzdNDpRm2qLH7Wnr4nh0+2Ov/GLP1S8Q6Xe33PWuP
+Vle/OdrzbaB6qvUoLEdk+hx0mK1xwgMmJaR/xRkVNQ+VowoXsGureu7Fu2JB
+nqbu1HVDvn7cu/EqNxiK+RZke3dUP4O/bbs7HPgeqbxAD3S02UkyRjwQZP25
+oiTNE0+KDQZbFj1hlWjNJl32wj5XLyWf441mcpDdxb+88VadIJsp8wGuZ+t6
+Mbaj4PiZb05PbsdAiEwzUMCA2RcKkaULE4kL3UPpI0zUq4a57Sd9YVFhFOPl
+7YfylMgDtzR+0PGsyHO5vgP5lGGpQkjg/QtJeKUe4DXU8GRoH5Dd0ZdE7QGO
+aU/1vHTyx6moD1sfXfCHRG5crNBi4XuNk6Yog4Uq30DBgccsyCUiZSDYaHx8
+3MyukY0WesUJihEHZdSxm9N1HOSusZnpc+ci4mW6ZZOKC/fxW5HSiAAYPXxf
+mDUVgNed7F8EuTsxfKNoyYMcCGXVkKNpeSD0zUT2nvE8pFbO20ZsCUIXNY+e
+PR8Ek1IdWklbMDL1z29W5Iegt9DG/D6PD5p2i/EsNRTiMwR17VgoVOxNXNNH
+YVh7arljoygcjhNfqS/+EQ4BoZ6nR+6CuJql3dS/C5dXfrLy2CmAKt6C2dkt
+wExHYSSHEQFaayvz18EIxDQ/s8b+SJQ2GqzrIkXh7hXGAvNCFEg1aaPtzrvh
+Iyu74927G1nlXdeUe6Oh/y1fGWsWg4asMdXKYAy4iem/1xbFYpK/PMHlxuGk
+r0QzuxqHTdvMVs/d3oNW83o9t5x4jGhCHSROCVjqeRM88SIBppeq073r98In
+J6BImpwIB5uj6leGQvgaBqdaHhIiZNlykfdACP6cyLaZLULoxJVokw4Rwoam
+C/LcklA/m8vZcSwJH0/bnYR/ADYVnf0=
+             "], {
+             Developer`PackedArrayForm, {0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 
+              20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 
+              52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 80, 82, 
+              84, 86, 88, 90, 92, 94, 96, 98, 100, 102, 104, 106, 108, 110, 
+              112, 114, 116, 118, 120, 122, 124, 126, 128, 130, 132, 134, 136,
+               138, 140, 142, 144, 146, 148, 150, 152, 154, 156, 158, 160, 
+              162, 164, 166, 168, 170, 172, 174, 176, 178, 180, 182, 184, 186,
+               188, 190, 192, 194, 196, 198, 200, 202, 204, 206, 208, 210, 
+              212, 214, 216, 218, 220, 222, 224, 226, 228, 230, 232, 234, 236,
+               238, 240}, CompressedData["
+1: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
+L/9cEE2b98zqlFdIann/ATvXvEE=
+              "]}, {
+             Automatic}]}}, $CellContext`maxT = 150, $CellContext`seqn[
+          Pattern[$CellContext`\[Alpha], 
+           Blank[]]] := 
+        Derivative[
+          1][$CellContext`s][$CellContext`t] == (-$CellContext`\[Alpha]) \
+$CellContext`s[$CellContext`t] $CellContext`i[$CellContext`t], $CellContext`\
+\[Alpha] = 0.54, 
+        Attributes[Derivative] = {NHoldAll, ReadProtected}, $CellContext`ieqn[
+         
+          Pattern[$CellContext`\[Alpha], 
+           Blank[]], 
+          Pattern[$CellContext`\[Beta], 
+           Blank[]]] := 
+        Derivative[
+          1][$CellContext`i][$CellContext`t] == ($CellContext`\[Alpha] \
+$CellContext`s[$CellContext`t] - $CellContext`\[Beta]) \
+$CellContext`i[$CellContext`t], $CellContext`\[Beta] = 1/10, 
+        Attributes[PlotRange] = {ReadProtected}}; Typeset`initDone$$ = True); 
+     ReleaseHold[{{
+         HoldComplete[$CellContext`maxT = 150; Null], 
+         HoldComplete[Null], 
+         HoldComplete[$CellContext`seqn[
+             Pattern[$CellContext`\[Alpha], 
+              Blank[]]] := 
+           Derivative[
+             1][$CellContext`s][$CellContext`t] == (-$CellContext`\[Alpha]) \
+$CellContext`s[$CellContext`t] $CellContext`i[$CellContext`t]; Null], 
+         HoldComplete[Null], 
+         HoldComplete[$CellContext`ieqn[
+             Pattern[$CellContext`\[Alpha], 
+              Blank[]], 
+             Pattern[$CellContext`\[Beta], 
+              Blank[]]] := 
+           Derivative[
+             1][$CellContext`i][$CellContext`t] == ($CellContext`\[Alpha] \
+$CellContext`s[$CellContext`t] - $CellContext`\[Beta]) \
+$CellContext`i[$CellContext`t]; Null]}}]; Typeset`initDone$$ = True),
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellID->86140438],
+
+Cell[CellGroupData[{
+
+Cell["CAPTION", "Section",
+ CellFrame->{{0, 0}, {1, 0}},
+ CellFrameColor->RGBColor[0.87, 0.87, 0.87],
+ FontFamily->"Helvetica",
+ FontSize->12,
+ FontWeight->"Bold",
+ FontColor->RGBColor[0.597406, 0, 0.0527047]],
+
+Cell["\<\
+The SIR model of disease spread through a population can be investigated for \
+different values of important disease characteristics, such as contact number \
+and disease duration. The proportion of the population susceptible to \
+infection (blue line) and actively infected (red line) are shown over the \
+course of a disease's spread through the population. The initially infected \
+fraction of the population and the initial fraction who are immune can be \
+manipulated to see the effect on disease dynamics in the population.\
+\>", "Text"]
+}, Close]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["DETAILS", "Section",
+ CellFrame->{{0, 0}, {1, 0}},
+ CellFrameColor->RGBColor[0.87, 0.87, 0.87],
+ FontFamily->"Helvetica",
+ FontSize->12,
+ FontWeight->"Bold",
+ FontColor->RGBColor[0.597406, 0, 0.0527047]],
+
+Cell[TextData[{
+ "This Demonstration was developed for a non-majors introductory course in \
+medical microbiology where there is a need to discuss basic epidemiological \
+principles. In this section, I would like to explore some of the ways that ",
+ StyleBox["Mathematica ",
+  FontSlant->"Italic"],
+ "can be used to advantage in making mathematically based information \
+accessible to students possessing varying levels of mathematical skills."
+}], "Text"],
+
+Cell["\<\
+Like many processes associated with living organisms, the spread of a disease \
+caused by a microorganism through a population can be modeled mathematically \
+using differential equations. Although numerous models of varying complexity \
+have been developed to describe the dynamics of disease spread in a \
+population, the SIR model presented here combines relative simplicity with \
+good modeling of diseases that are spread from person-to-person and are \
+familiar to students, such as measles, smallpox, and influenza.\
+\>", "Text"],
+
+Cell[TextData[{
+ "In the SIR model, members of a population are categorized into one of three \
+groups: those who are susceptible to being infected, those who have been \
+infected and are able to spread the disease to susceptible individuals, and \
+those who have recovered from the disease and are immune to subsequent \
+re-infection. Movement of individuals is one-way only, ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"S", " ", "\[Rule]", " ", 
+    RowBox[{"I", " ", "\[Rule]", " ", "R"}]}], TraditionalForm]], 
+  "InlineMath"],
+ ", and the two fundamental parameters of the model, ",
+ Cell[BoxData[
+  FormBox["\[Alpha]", TraditionalForm]], "InlineMath"],
+ " (the daily infection rate) and ",
+ Cell[BoxData[
+  FormBox["\[Beta]", TraditionalForm]], "InlineMath"],
+ " (the recovery rate), act as rate constants that control how fast members \
+progress into the ",
+ Cell[BoxData[
+  FormBox["I", TraditionalForm]], "InlineMath"],
+ " and ",
+ Cell[BoxData[
+  FormBox["R", TraditionalForm]], "InlineMath"],
+ " groups, respectively. A composite parameter, ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[Gamma]", "=", 
+    FractionBox["\[Alpha]", "\[Beta]"]}], TraditionalForm]], "InlineMath"],
+ ", is often used and is referred to as the contact number. The SIR model is \
+described by the differential equations"
+}], "Text"],
+
+Cell[TextData[Cell[BoxData[
+ FormBox[
+  RowBox[{
+   StyleBox[
+    FractionBox["dS", "dt"],
+    FontSlant->"Italic"], "=", 
+   RowBox[{
+    RowBox[{"-", "\[Alpha]"}], " ", "S", " ", "I"}]}], 
+  TraditionalForm]], "InlineMath"]], "Text"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    StyleBox[
+     FractionBox["dI", "dt"],
+     FontSlant->"Italic"], "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"\[Alpha]", " ", "S", " ", "I"}], "-", 
+      RowBox[{"\[Beta]", " ", "I"}]}], "=", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"\[Alpha]", " ", "S"}], "-", "\[Beta]"}], ")"}], "I"}]}]}], 
+   TraditionalForm]], "InlineMath"],
+ "."
+}], "Text"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox["S", TraditionalForm]], "InlineMath"],
+ " and ",
+ Cell[BoxData[
+  FormBox["I", TraditionalForm]], "InlineMath"],
+ " refer to the fraction of the population in the susceptible and infected \
+groups, respectively. When initial conditions for these groups are specified, \
+the change in size of these groups may be plotted over time."
+}], "Text"],
+
+Cell[TextData[{
+ "For students with calculus-level math skills, careful inspection of these \
+equations will reveal insights into the dynamics of the disease in a \
+population. For example, if the fraction of the population in the infected \
+group is initially increasing (i.e., ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    StyleBox[
+     FractionBox["dI", "dt"],
+     FontSlant->"Italic"], ">", "0"}], TraditionalForm]], "InlineMath"],
+ " at ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"t", "=", "0"}], TraditionalForm]], "InlineMath"],
+ "), an epidemic has begun. The transition between an epidemic and a \
+non-epidemic spread of a disease thus occurs when ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    StyleBox[
+     FractionBox["dI", "dt"],
+     FontSlant->"Italic"], "=", "0"}], TraditionalForm]], "InlineMath"],
+ ", and inspection of the second equation above will quickly reveal that this \
+transition point results when ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["S", "0"], "=", 
+    FractionBox["\[Beta]", "\[Alpha]"]}], TraditionalForm]], "InlineMath"],
+ ". Likewise, the peak of an epidemic occurs when ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"S", "=", 
+    FractionBox["\[Beta]", "\[Alpha]"]}], TraditionalForm]], "InlineMath"],
+ " and the rate of change of the infected group stops increasing and starts \
+decreasing."
+}], "Text"],
+
+Cell[TextData[{
+ "For non-major courses, however, the assumption that the students possess \
+calculus-level skills is often not valid, and discussions of epidemic \
+dynamics based on the mathematics behind the SIR model are not only less \
+effective, but may be counterproductive. This does not mean that these \
+students should not be exposed to the dynamics of disease spread. An approach \
+that de-emphasizes the mathematics and instead focuses on the practical \
+aspects of disease spread is required. For example, introducing the contact \
+number, ",
+ Cell[BoxData[
+  FormBox["\[Gamma]", TraditionalForm]], "InlineMath"],
+ ", to these students as one of the most important characteristics \
+determining the dynamics of spread of a particular disease is much more \
+useful than a discussion of the rate parameters of the model. The contact \
+number also has an easily understood \"real-world\" interpretation: the \
+average number of susceptible members of the population an infected \
+individual spreads the disease to while that individual is in the infected \
+group. Whether an epidemic will ensue under certain initial conditions can \
+now be discussed in terms of the contact number, and students may reasonably \
+be expected to empirically determine that the transition between epidemic and \
+non-epidemic states occurs when the initial fraction of the population in the \
+susceptible group is equal to the reciprocal of the contact number (Snapshot \
+1). The recovery rate, ",
+ Cell[BoxData[
+  FormBox["\[Beta]", TraditionalForm]], "InlineMath"],
+ ", can be also be indirectly introduced as the more accessible duration of \
+the disease ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "\[Beta]"], TraditionalForm]], "InlineMath"],
+ "."
+}], "Text"],
+
+Cell[TextData[{
+ "By discussing epidemic dynamics in terms of these more easily \
+understandable parameters and allowing ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " to convert to the actual model parameters behind the scenes, it is \
+possible for discussions of an important topic to be tailored to the student \
+audience. The dynamic nature of the output also facilitates discussions of \
+the effect of different parameters on the nature of disease spread in a \
+population without necessarily resorting to the equations governing the \
+model. In particular, the importance of contact number (Snapshots 2 and 3) \
+and the effect of artificially moving members of the population directly from \
+the susceptible group to the recovered (and therefore immune) group through \
+immunizations (Snapshot 4) can be easily investigated by manipulating the \
+appropriate sliders."
+}], "Text"]
+}, Close]],
+
+Cell[CellGroupData[{
+
+Cell["THIS NOTEBOOK IS THE SOURCE CODE FROM", "Text",
+ CellFrame->{{0, 0}, {0, 0}},
+ CellMargins->{{48, 10}, {4, 28}},
+ CellGroupingRules->{"SectionGrouping", 25},
+ CellFrameMargins->{{48, 48}, {6, 5}},
+ CellFrameColor->RGBColor[0.87, 0.87, 0.87],
+ FontFamily->"Helvetica",
+ FontSize->10,
+ FontWeight->"Bold",
+ FontColor->RGBColor[0.597406, 0, 0.0527047]],
+
+Cell[TextData[{
+ "\"",
+ ButtonBox["SIR Epidemic Dynamics",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://demonstrations.wolfram.com/SIREpidemicDynamics/"], None},
+  ButtonNote->"http://demonstrations.wolfram.com/SIREpidemicDynamics/"],
+ "\"",
+ " from ",
+ ButtonBox["the Wolfram Demonstrations Project",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://demonstrations.wolfram.com/"], None},
+  ButtonNote->"http://demonstrations.wolfram.com/"],
+ "\[ParagraphSeparator]\[NonBreakingSpace]",
+ ButtonBox["http://demonstrations.wolfram.com/SIREpidemicDynamics/",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://demonstrations.wolfram.com/SIREpidemicDynamics/"], None},
+  ButtonNote->"http://demonstrations.wolfram.com/SIREpidemicDynamics/"]
+}], "Text",
+ CellMargins->{{48, Inherited}, {0, Inherited}},
+ FontFamily->"Verdana",
+ FontSize->10,
+ FontColor->GrayLevel[0.5]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Contributed by: ",
+ ButtonBox["Steve Strain",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://demonstrations.wolfram.com/author.html?author=Steve+Strain"], 
+    None}],
+ " (Department of Biology, Slippery Rock University of Pennsylvania)"
+}], "Text",
+ CellDingbat->"\[FilledSmallSquare]",
+ CellMargins->{{66, 48}, {2, 4}},
+ FontFamily->"Verdana",
+ FontSize->10,
+ FontColor->GrayLevel[0.6]],
+
+Cell[TextData[{
+ "Suggested by: ",
+ ButtonBox["Keith Stroyan",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://demonstrations.wolfram.com/author.html?author=Keith+Stroyan"],
+     None}]
+}], "Text",
+ CellDingbat->"\[FilledSmallSquare]",
+ CellMargins->{{66, 48}, {2, 4}},
+ FontFamily->"Verdana",
+ FontSize->10,
+ FontColor->GrayLevel[0.6],
+ CellID->348862998]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "A full-function Wolfram ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " system (Version 6 or higher) is required to edit this notebook.\n",
+ StyleBox[ButtonBox["GET WOLFRAM MATHEMATICA \[RightGuillemet]",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://www.wolfram.com/products/mathematica/"], None},
+  ButtonNote->"http://www.wolfram.com/products/mathematica/"],
+  FontFamily->"Helvetica",
+  FontWeight->"Bold",
+  FontSlant->"Italic",
+  FontColor->RGBColor[1, 0.42, 0]]
+}], "Text",
+ CellFrame->True,
+ CellMargins->{{48, 68}, {8, 28}},
+ CellFrameMargins->12,
+ CellFrameColor->RGBColor[0.87, 0.87, 0.87],
+ CellChangeTimes->{3.3750111182355957`*^9},
+ ParagraphSpacing->{1., 1.},
+ FontFamily->"Verdana",
+ FontSize->10,
+ FontColor->GrayLevel[0.411765],
+ Background->RGBColor[1, 1, 1]],
+
+Cell[TextData[{
+ "\[Copyright] ",
+ StyleBox[ButtonBox["Wolfram Demonstrations Project & Contributors",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://demonstrations.wolfram.com/"], None},
+  ButtonNote->"http://demonstrations.wolfram.com/"],
+  FontColor->GrayLevel[0.6]],
+ "\[ThickSpace]\[ThickSpace]\[ThickSpace]|\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+ StyleBox[ButtonBox["Terms of Use",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://demonstrations.wolfram.com/termsofuse.html"], None},
+  ButtonNote->"http://demonstrations.wolfram.com/termsofuse.html"],
+  FontColor->GrayLevel[0.6]],
+ "\[ThickSpace]\[ThickSpace]\[ThickSpace]|\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+ StyleBox[ButtonBox["Make a new version of this Demonstration \
+\[RightGuillemet]",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://demonstrations.wolfram.com/participate/upload.jsp?id=\
+SIREpidemicDynamics"], None},
+  ButtonNote->None],
+  FontColor->GrayLevel[0.6]]
+}], "Text",
+ CellFrame->{{0, 0}, {0, 0.5}},
+ CellMargins->{{48, 10}, {20, 50}},
+ CellFrameMargins->{{6, 0}, {6, 6}},
+ CellFrameColor->GrayLevel[0.6],
+ FontFamily->"Verdana",
+ FontSize->9,
+ FontColor->GrayLevel[0.6]]
+}, Open  ]]
+}, Open  ]]
+},
+Editable->True,
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+CellInsertionPointCell->None,
+WindowSize->{780, 650},
+WindowMargins->{{Inherited, Inherited}, {Inherited, 0}},
+WindowElements->{
+ "StatusArea", "MemoryMonitor", "MagnificationPopUp", "VerticalScrollBar", 
+  "MenuBar"},
+WindowTitle->"SIR Epidemic Dynamics - Source",
+DockedCells->{},
+CellContext->Notebook,
+FrontEndVersion->"8.0 for Microsoft Windows (32-bit) (November 7, 2010)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[623, 23, 141, 3, 70, "Section"],
+Cell[767, 28, 3700, 64, 70, "Section"],
+Cell[4470, 94, 1047, 32, 70, "Input",
+ InitializationCell->True,
+ CellID->290879053],
+Cell[5520, 128, 9861, 243, 70, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15418, 376, 18364, 329, 70, "Output",
+ CellID->86140438],
+Cell[CellGroupData[{
+Cell[33807, 709, 209, 6, 70, "Section"],
+Cell[34019, 717, 553, 8, 70, "Text"]
+}, Close]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[34620, 731, 209, 6, 70, "Section"],
+Cell[34832, 739, 456, 8, 70, "Text"],
+Cell[35291, 749, 546, 8, 70, "Text"],
+Cell[35840, 759, 1312, 31, 70, "Text"],
+Cell[37155, 792, 235, 8, 70, "Text"],
+Cell[37393, 802, 437, 17, 70, "Text"],
+Cell[37833, 821, 384, 9, 70, "Text"],
+Cell[38220, 832, 1353, 37, 70, "Text"],
+Cell[39576, 871, 1759, 31, 70, "Text"],
+Cell[41338, 904, 893, 15, 70, "Text"]
+}, Close]],
+Cell[CellGroupData[{
+Cell[42267, 924, 355, 9, 70, "Text",
+ CellGroupingRules->{"SectionGrouping", 25}],
+Cell[42625, 935, 893, 24, 70, "Text"],
+Cell[CellGroupData[{
+Cell[43543, 963, 417, 13, 70, "Text"],
+Cell[43963, 978, 366, 13, 70, "Text",
+ CellID->348862998]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[44366, 996, 815, 24, 70, "Text"],
+Cell[45184, 1022, 1191, 33, 70, "Text"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+(* NotebookSignature aQ4JkRzwozwjoA0J568qCp4H *)

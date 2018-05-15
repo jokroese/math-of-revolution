@@ -1,0 +1,28 @@
+\chapter{A Network Model}
+We have now accounted for stochasticity and the inherent randomness of a revolution. However a notable feature of revolutions is that they are not homogenous. A revoltionary movement depends on your friends and family. If you taken by an idea and your whole family is behind it, are are much more likely to actively get behind it too then if you know nobody elsewith that view in which case you will likely become less bisible in your beliefs. These are key effects in a revolution and are related to the non-linearity of revolutionary narratives and why revolutions are often localised in different cities.
+\section{Representing the social influence network}
+A natural question to ask is `what graph best approximates the social inflence network of humans?' Particularly with respect to being politically active. A possible answer is the scale-free graph\cite{albert-barabasi}. This reflects that some nodes are 'hubs', centres of high social influence who are models for the average citizen. Typically in a politically tense countries these will be writers, opposition politicians and religious leaders. However these people act (either for or against the regime) will have a large influence over the national psyche and hence their actions.\\
+(discuss different models with Thomas House)\\
+Similarly close family and friends are looked at in this way. This is one type of connection, that of the role model. This is at a moralistic level. The other is more practical and can be thought of as a `numbers game', calculating the chance of the revolution succeeding based on how many people you come into contact with are active and comparing this to the risk of jail time.
+\section{My model}
+\subsection{Overview and motivations}
+Developments in network science allow a more generalised and less spatially orientated model than Epstein's. Seeing the increasing importance of technological communication and decreasing importance of spatial proximity in revolutionary movements, a network model is well prepared to take into account the multi-faceted type of interactions citizens can have between each other. We also overcome the sociological problems of Shaggy's work by trying to use real parameters where possible.\\
+One unusual recent result about revolutions is how the percentage of the population active in the revolution actually only needs to be very small. Erica Chinoweth has found that only 3.5\% of a population needs to be actively involved for a revolution succeed\cite{3.5}.\\
+We also use the fact of link-formation with otherwise unknown citizens as being the primary symptom of revolutions.\\
+
+\subsection{Formal description of model}
+Graph of $N$ vertices. Each vertex can be one of four types: rebel ($R$), loyalist ($L$), neutral ($N$) and removed ($DUNNA$). Their respective amounts are $N_R$, $N_L$ and $N_N$. In the beginning all vertices are type R, L or N (there are 0 removed vertices). \\
+Type $R$ vertices can make links with any other vertex that they are not yet connected to (or should it also allow 'strengthening' of links?)
+
+
+
+There is also a fourth type: 'removed'. This can simulate imprisonment or a killing.
+Include diagram of the possible moves between each type
+
+\subsection{Toy example}
+to explain and illustrate how it works, maybe use 50 nodes and 10\% active participation needed.
+
+\subsection{Simulated example}
+Use 10,000s (as many as computer can handle really- on the scale of millions would be ideal but should aim for 100,000)\\
+Analyse bifurcation points, general trends, important phenomena\\
+could do analysis of importance of nodes views relative to their centrality.

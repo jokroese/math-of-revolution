@@ -1,0 +1,223 @@
+Strategy Name, Average Pay-off
+Adaptive,2.389140271
+Adaptive Tit For Tat,2.375565611
+Aggravater,4.167420814
+Alexei,4.20361991
+ALLCorALLD,3.239819005
+Alternator,2.334841629
+Alternator Hunter,2.375565611
+AntiCycler,2.321266968
+Anti Tit For Tat,2.36199095
+Adaptive Pavlov 2006,2.36199095
+Adaptive Pavlov 2011,2.36199095
+Appeaser,2.375565611
+Arrogant QLearner,2.407239819
+Average Copier,3.230769231
+BackStabber,4.167420814
+Better and Better,4.20361991
+Black,2.34841629
+Borufsen,2.36199095
+Bully,4.149321267
+Bush Mosteller,3.316742081
+Calculator,2.402714932
+Cautious QLearner,2.43438914
+Cave,2.36199095
+Champion,2.36199095
+Colbert,2.375565611
+CollectiveStrategy,2.334841629
+Contrite Tit For Tat,2.389140271
+Cooperator,2.334841629
+Cooperator Hunter,2.34841629
+Cycle Hunter,2.36199095
+Cycler CCCCCD,2.389140271
+Cycler CCCD,2.334841629
+Cycler CCD,2.375565611
+Cycler DC,4.20361991
+Cycler DDC,4.131221719
+Cycler CCCDCD,2.375565611
+Davis,2.375565611
+DBS,2.416289593
+Defector,4.131221719
+Defector Hunter,2.34841629
+Desperate,3.230769231
+DoubleCrosser,4.20361991
+Doubler,2.375565611
+DoubleResurrection,2.402714932
+EasyGo,4.20361991
+Eatherley,2.334841629
+EugineNier,4.185520362
+Eventual Cycle Hunter,2.321266968
+Evolved ANN,2.334841629
+Evolved ANN 5,2.34841629
+Evolved ANN 5 Noise 05,2.375565611
+Evolved FSM 4,2.36199095
+Evolved FSM 16,2.34841629
+Evolved FSM 16 Noise 05,2.36199095
+EvolvedLookerUp1_1_1,2.36199095
+EvolvedLookerUp2_2_2,2.389140271
+Evolved HMM 5,2.36199095
+Feld,2.375565611
+Firm But Fair,2.36199095
+Fool Me Forever,4.149321267
+Fool Me Once,2.36199095
+Forgetful Fool Me Once,2.375565611
+Forgetful Grudger,2.375565611
+Forgiver,2.375565611
+Forgiving Tit For Tat,2.375565611
+Fortress3,4.131221719
+Fortress4,4.131221719
+GTFT,2.375565611
+General Soft Grudger,2.321266968
+Getzler,2.402714932
+Gladstein,4.167420814
+Soft Go By Majority,2.416289593
+Soft Go By Majority: 10,2.34841629
+Soft Go By Majority: 20,2.36199095
+Soft Go By Majority: 40,2.321266968
+Soft Go By Majority: 5,2.34841629
+$\phi$,2.334841629
+GraaskampKatzen,2.34841629
+Gradual,2.416289593
+Gradual Killer,4.167420814
+Grofman,2.375565611
+Grudger,2.321266968
+GrudgerAlternator,2.389140271
+Grumpy,2.321266968
+Handshake,2.34841629
+Hard Go By Majority,4.185520362
+Hard Go By Majority: 10,4.149321267
+Hard Go By Majority: 20,4.149321267
+Hard Go By Majority: 40,4.131221719
+Hard Go By Majority: 5,4.167420814
+Hard Prober,4.221719457
+Hard Tit For 2 Tats,2.375565611
+Hard Tit For Tat,2.402714932
+Harrington,2.36199095
+Hesitant QLearner,2.443438914
+Hopeless,3.266968326
+Inverse,2.389140271
+Inverse Punisher,2.34841629
+Joss,2.375565611
+Kluepfel,2.389140271
+Knowledgeable Worse and Worse,4.131221719
+Level Punisher,2.34841629
+Leyvraz,2.34841629
+Limited Retaliate,2.389140271
+Limited Retaliate 2,2.321266968
+Limited Retaliate 3,2.36199095
+Math Constant Hunter,2.389140271
+Naive Prober,2.334841629
+MEM2,2.34841629
+Michaelos,4.185520362
+Mikkelson,2.36199095
+MoreGrofman,2.36199095
+More Tideman and Chieruzzi,2.375565611
+Negation,3.34841629
+Nice Average Copier,2.402714932
+N Tit(s) For M Tat(s),2.321266968
+Nydegger,2.36199095
+Omega TFT,2.375565611
+Once Bitten,2.375565611
+Opposite Grudger,4.185520362
+$\pi$,2.36199095
+Predator,2.375565611
+Prober,4.185520362
+Prober 2,4.131221719
+Prober 3,4.149321267
+Prober 4,2.389140271
+Pun1,4.221719457
+PSO Gambler 1_1_1,2.34841629
+PSO Gambler 2_2_2,2.307692308
+PSO Gambler 2_2_2 Noise 05,2.334841629
+PSO Gambler Mem1,2.36199095
+Punisher,2.389140271
+Raider,4.185520362
+Random,3.180995475
+Random Hunter,2.36199095
+Random Tit for Tat,2.36199095
+Remorseful Prober,2.375565611
+Resurrection,2.334841629
+Retaliate,2.34841629
+Retaliate 2,2.36199095
+Retaliate 3,2.334841629
+Revised Downing,2.389140271
+RichardHufford,2.36199095
+Ripoff,4.167420814
+Risky QLearner,2.452488688
+SelfSteem,3.330316742
+ShortMem,2.334841629
+Shubik,2.375565611
+Slow Tit For Two Tats 2,2.321266968
+Sneaky Tit For Tat,2.34841629
+Soft Grudger,2.375565611
+Soft Joss,2.36199095
+SolutionB1,4.149321267
+SolutionB5,4.149321267
+Spiteful Tit For Tat,2.34841629
+Stalker,4.149321267
+Stein and Rapoport,4.076923077
+Stochastic Cooperator,2.375565611
+Stochastic WSLS,2.389140271
+Suspicious Tit For Tat,4.131221719
+Tester,4.221719457
+TF1,2.36199095
+TF2,2.389140271
+TF3,2.334841629
+ThueMorse,4.149321267
+ThueMorseInverse,2.321266968
+Thumper,2.402714932
+Tideman and Chieruzzi,2.36199095
+Tit For Tat,2.36199095
+Tit For 2 Tats,2.375565611
+Tranquilizer,2.34841629
+Tricky Cooperator,2.416289593
+Tricky Defector,4.20361991
+Tullock,2.34841629
+Two Tits For Tat,2.375565611
+VeryBad,2.334841629
+Weiner,2.36199095
+White,2.402714932
+Willing,3.334841629
+Winner12,2.36199095
+Winner21,4.167420814
+Win-Shift Lose-Stay,4.167420814
+Win-Stay Lose-Shift,2.375565611
+WmAdams,2.34841629
+Worse and Worse,2.389140271
+Worse and Worse 2,2.375565611
+Worse and Worse 3,2.34841629
+Yamachi,2.36199095
+ZD-Extortion,2.389140271
+ZD-Extort-2,2.34841629
+ZD-Extort3,2.34841629
+ZD-Extort-2 v2,2.389140271
+ZD-Extort-4,2.34841629
+ZD-GTFT-2,2.375565611
+ZD-GEN-2,2.375565611
+ZD-Mem2,2.334841629
+ZD-Mischief,2.334841629
+ZD-SET-2,2.389140271
+$e$,2.36199095
+Dynamic Two Tits For Tat,2.34841629
+Meta Hunter,2.36199095
+Meta Hunter Aggressive,2.389140271
+Meta Majority,2.36199095
+Meta Majority Memory One,2.334841629
+Meta Majority Finite Memory,2.375565611
+Meta Majority Long Memory,2.389140271
+Meta Minority,4.20361991
+Meta Mixer,2.642533937
+Meta Winner,2.307692308
+Meta Winner Deterministic,2.375565611
+Meta Winner Ensemble,2.36199095
+Meta Winner Memory One,2.375565611
+Meta Winner Finite Memory,2.389140271
+Meta Winner Long Memory,2.334841629
+Meta Winner Stochastic,2.375565611
+NMWE Deterministic,2.375565611
+NMWE Finite Memory,2.389140271
+NMWE Long Memory,2.334841629
+NMWE Memory One,2.375565611
+NMWE Stochastic,2.34841629
+Nice Meta Winner,2.375565611
+Nice Meta Winner Ensemble,2.389140271

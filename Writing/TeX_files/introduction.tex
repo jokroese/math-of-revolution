@@ -1,0 +1,55 @@
+%\begin{tcolorbox}[colback=susceptible-colour!50,coltext=white]
+	\chapter{Introduction}
+%\textit{An introduction, giving an overview of the project and its context, and perhaps mentioning prerequisites (such as saying, "the reader should be familiar with a first course in linear Algebra"). Often an introduction will contain a paragraph or so describing briefly what is done in each chapter. It is also worth stressing the original contributions that you have made in the abstract.}\\
+%\\
+\subsection{Revolution as infectious disease}
+%\end{tcolorbox}
+%\paragraph{Revolutions are like infectious diseases}
+In many ways a revolution is like an infectious disease. Though the mechanics of transmission are inherently different, there are notable parallels. At the centre of a revolution is an idea. This idea spreads through the population by `contact' between individuals. It has hosts, ways of spreading, an origin, hotspots and occasional eruptive dynamics.\\
+\\
+%\paragraph{Ideas are like infectious diseases}
+Research has shown that ideas replicate very similarly to infectious diseases\cite{meme-epidemic}\cite{the-power-of-a-good-idea}. This insight has allowed researchers access to a rich set of methods and vocabulary from mathematical epidemiology to study the spread of ideas through a population. Making simple reinterpretations such as viewing `infectious' as `actively sharing an idea' we can sometimes even use identical models\cite{thomas-house}.\\
+\\
+%\paragraph{Revolutions have ideas at their core...}
+Revolutions are infinitely varied but one common feature is that they all fundamentally rely on ideas. At each revolution's core is some self-replicating idea\footnote{In this way the spreading idea is a `meme' in Richard Dawkins' sense of `a cultural entity that appears to exhibit self-replication'\cite{selfish-gene}.} that inspires and justifies political change. Without this shared idea to rally around the citizens struggle for cohesion making a successful revolution unlikely\cite{tyranny}\cite{logic-non-violence}. If a revolution may be thought of as the revolutionary idea that drives it, we can model the revolution through the spread of the idea.
+%As a revolutionary idea is still an idea, a revolution can be modelled as if it were an infectious disease.
+\\
+\\
+%\paragraph{... But they are different}
+However, a revolutionary idea is an idea of a special kind in that it carries a risk to those who actively disseminate it. The reason for not sharing most ideas is simply apathy. Meanwhile, a reason to avoid sharing a political idea is fear of imprisonment, social isolation and worse.
+%So there is an extra disincentive not to share the revolutionary idea as doing so risks negative personal repercussions from the authorities.
+Therefore, whilst we may take inspiration from mathematical epidemiology and research on the spread of ideas, we should do so with caution. In particular we must remember that we will need to add specific extensions to the models that will have no epidemic equivalent.
+%\\
+
+%paragraph{Mathematical Epidemiology}
+%Epidemiology is the study of how communicable diseases spread between individuals in a population. Mathematics has offered insights into this phenomena since Daniel Bernoulli's paper on inoculation against smallpox in 1760\cite{bernoulli}. Mathematical models have increasingly become a major feature of public health organisation's attempt to eradicate and reduce the spread of diseases. Its clear benefit to medicine has meant that it has quickly developed a rich set of techniques and models.
+
+\subsection{What we talk about when we talk about revolutions}
+`Revolution' is an expansive concept. In its most general political and sociological sense a revolution is an effort to transform the political institutions and the justifications for political authority in society by a popular movement in an irregular, extraconstitutional or violent fashion\cite{goldstone_2001}\cite{goodwin-2006}.
+This includes events as disparate as the peaceful Philippine Revolution of 1986, the French Revolution and the Egyptian coup d'\'etat of 1952.\\
+\\
+This paper will look exclusively at `bottom-up' revolutions in which non-violent action played a substantial role. These requirements allow us to focus on the spread of ideas and avoid considerations such as militaristic power which complicate the dynamics. Further there have been recent advances in the statistical analysis of non-violent resistance which provide useful data for analysing and tunings the models. In particular, Erica Chenoweth's \textit{Why Civil Resistance Works: The Strategic Logic of Nonviolent Conflict} has provided a firm footing for the quantitative study of nonviolent revolutions\cite{logic-non-violence}.\\
+\\
+In particular, our prototypical case will be the Tunisian Revolution in 2010 that marked the beginning of the Arab Spring. The revolution resulted in the overthrow of President Ben Ali after widespread civil resistance in reaction to high levels of unemployment, corruption and restricted press freedom\cite{andrew-gee_2018}. This is often spoken of as the `first digital revolution' due to the significant role social media played in affecting the spread of information, ideas and revolutionary action\cite{social-networks-tunisia}.\\
+\\
+Previous explanatory models of revolutionary behaviour have focused on spatial processes which undoubtedly play a key role during the peak of a revolution and also throughout pre-digital revolutions\cite{epstein}. However there is a lack of quantitative research into how a revolutionary idea spreads through a society in a way that is general enough to account for the globalising effect of social media. This paper aims to provide a direction for such models, explaining the dynamics of non-violent revolution in a way that can account for all manner of social contact.
+%This paper aims to provide a direction for future explanatory models to explain the dynamics of non-violent revolution that is general enough to account for the rapid and globalised communication and organisation that social media facilitates.
+
+\subsection{Paper structure}
+%\paragraph{Purpose of paper}
+In particular we will develop two models that make no assumptions about the way ideas are transferred, allowing them to be general enough to account for social media communication as well as conventional media. These models will explore two different ways of taking inspiration from mathematical epidemiology to develop original models of political revolution. We will see that the first model, whilst simple, can offer interesting insights whilst being analytically tractable. However the limitations of this model motivate the development of a more complex model that can only be understood statistically but can provide more accurate descriptions.\\
+\\
+%\paragraph{Compartmental models}
+Chapter \ref{ch:compartments} will explore the application of compartmental models to the study of revolutions. We will start by analysing a special case of the Kermack-McKendrick epidemic model known as the SIR model. This will give us a system  of differential equations that we can solve analytically. We will extend this simplistic model by adding some specific nuances to develop a model of the spread of revolutionary ideas. We will also develop some measures to help us build a deeper understanding of the model and, more generally, revolutions.\\
+%%\paragraph{Branching models}
+%These will all be continuous, deterministic models. The assumptions of determinism and allowing continuous numbers of people are acceptable when the populations and compartments are all relatively large. However at the start of a revolution this assumption does not hold and causes notable divergences between the models and field data. Thus chapter \ref{ch:stochastic} will develop a branching model that can incorporate stochasticity.\\
+\\
+%\paragraph{Chapter 3: ABMs}
+This will be s continuous, deterministic models. These assumptions are acceptable when the populations and compartments are all relatively large. However at the start of any outbreak this assumption does not hold and causes notable divergences between the models and field data. Thus Chapter \ref{ch:abms} will develop an agent-based model that can incorporate stochasticity. This will be able to provide greater nuance and predictive power. Here citizens will respond to their local environment. This model will be able to show features such as the local flare-ups that are characteristic of revolutions.\\
+\\
+A central idea of social systems is that individuals have agency and that their decisions depend on the relations they have with others. Chapter \ref{ch:games-on-networks} explores these ideas outside the area of epidemiology and revolutions, looking at games on networks with applications to cooperation. Within it there are primers on game theory and graph theory and an extended example using the Prisoner's Dilemma to show interesting ways to fuse these two areas.\\
+\\
+Chapter \ref{ch:conclusion} provides a summary of the paper and a suggestion for the direction of future research in the area. Finally, Chapter \ref{ch:mathematical-background} gives a short primer on dynamical systems and some key excepts of code used throughout the project.
+
+%and explorations of the key theoretical areas used throughout the paper: graph theory, game theory and dynamical systems.
+

@@ -1,0 +1,78 @@
+\chapter{Appendix}\label{ch:mathematical-background}
+\section{Stability theory}\label{dynamical-systems}
+A dynamical system is a system that evolves in time. Stability theory is concerned with finding and classifying equilibriums. These are states of the system that do not change with time. Many dynamical systems can be represented through differential equations. If the system of differential equations has $n$ variables, choosing any set of values for the variables defines a point $x\in\mathbb{R}^n$. As the differential equations describe some change in time, moving time forwards sees this point moves through the space $\mathbb{R}^n$. The path made by including all points passed through in a period of time is called a \textit{trajectory}.\\
+\\
+A \textit{fixed point}, $\bf{x}$, is a point at which, if there is no perturbation, the system will stay forever. It is a time-independent solution to the system. However, there are many different types of fixed point. The two basic classes are stable and unstable fixed points. Informally, a fixed point $x$ is stable if a small perturbation from the point will bring it back to $x$. Similarly, a fixed point is unstable if a small perturbation from the point $x$ makes the system move away from $x$.\\
+\\
+%Let's get a bit more specific with this. Three key concepts are attraction, liapanov stability and asymptotic stability.
+Let $\bf{x}\in\mathbb{R}^n$ and $\bf{f}:\mathbb{R}^n\rightarrow\mathbb{R}^n$ such that $\bf{\dot x}=\bf{f}(\bf{x})$. This is a compact form of
+\begin{equation}\label{eq:compact-form}
+\frac{d}{dt}
+\begin{bmatrix}
+ x_1 \\
+\vdots\\
+x_n
+\end{bmatrix}
+=
+\begin{bmatrix}
+f_1(x_1,...,x_n) \\
+\vdots\\
+f_n(x_1,...,x_n)
+\end{bmatrix}
+\end{equation}
+We say that $\bf{x}^*$ is a \textit{fixed point} of a dynamical system if $\bf{f}(\bf{x}^*)=\bf(0)$. Geometrically this means that this point would not move. $\bf{x}^*$ is also called an equilibrium.\\
+\\
+%Let $\bf{x}^*$ be a fixed point. We say that a point is \textit{attracting} if all trajectories starting near $x^*$ approach $x^*$ as time goes to infinity. Formally this means that 
+%\begin{equation*}
+%\lim_{t\rightarrow\infty}\norm{\bf{x}(t)-\bf{x}^*(t)} = 0
+%\end{equation*}
+%A point is \textit{stable} (or Liapanov stable) if all trajectories that start close to $x^*$ stay close to it for all time. Formally this means
+%\begin{equation*} \forall\epsilon>0,\exists\delta>0\text{ s.t. }\norm{x(0)-x^*}<\delta\implies\norm{x(t)-x^*}<\epsilon,\forall t>0
+%\end{equation*}
+%A fixed point that is not (Liapanov) stable is \textit{unstable}\cite{Braun:1993kx}.\\
+%\\
+%More strongly, a fixed point is \textit{asymptotically stable} if it is both attracting and Liapanov stable. The difference between Liapanov and asymptotic stability is that a small perturbation from a (Liapanov) stable point will stay close. However, a small perturbation from an asymptotically stable point will return to the fixed point. Thus a pendulum without friction is Liapanov stable but a pendulum with friction is also asymptotically stable.
+%https://www.cds.caltech.edu/~murray/courses/cds101/fa02/faq/02-10-23_lyapexact.html
+We say $\bf{x}(t)$ is \textit{stable} if it is a solution of Eq. (\ref{eq:compact-form}) with initial condition $\bf{x}(t=0)=\bf{x_0}$ and $\forall \epsilon>0,\exists \delta>0$ such that if $\bf{x'}(t)$ is another solution of Eq. (\ref{eq:compact-form}) with $\bf{x'}(t=0)=\bf{x_0}'$ and $\norm{\bf{x_0'}-\bf{x_0}}<\delta$ then $\norm{\bf{x'}(t)-\bf{x}(t)}<\epsilon$ for all $t\geq0$\cite{Braun:1993kx}. Finally, a solution of Eq. (\ref{eq:compact-form}) that is not stable is \textit{unstable}\cite{Braun:1993kx}.
+\subsubsection{Jacobian}
+The stability of a point $\mathbf{x}$ can be investigated by considering the Jacobian matrix at that point. The Jacobian is the generalisation of a derivative, providing the best linear approximation of a function at a differentiable point.\\
+\\
+%Suppose we have a triple integral in the set of variables $x, y, z$:
+%\begin{equation*}
+%\int\int\int f(x,y,z)\,dx\,dy\,dz
+%\end{equation*}
+%Let $r, s, t$ be another set of variables, related to $x, y, z$ by the equations
+%\begin{equation*}
+%r=r(x,y,z), \hspace{1cm} s=s(x,y,z), \hspace{1cm} t=t(x,y,z)
+%\end{equation*}
+The general Jacobian of a function $\bf{f}:\mathbb{R}^n\rightarrow\mathbb{R}^m$ that takes elements $\bf{x}\in\mathbb{R}^n$ and outputs the vector $\bf{f}(\bf{x})\in\mathbb{R}^m$ is given by:
+\begin{equation*}
+{\displaystyle \mathbf {J} ={\begin{bmatrix}{\dfrac {\partial \mathbf {f} }{\partial x_{1}}}&\cdots &{\dfrac {\partial \mathbf {f} }{\partial x_{n}}}\end{bmatrix}}={\begin{bmatrix}{\dfrac {\partial f_{1}}{\partial x_{1}}}&\cdots &{\dfrac {\partial f_{1}}{\partial x_{n}}}\\\vdots &\ddots &\vdots \\{\dfrac {\partial f_{m}}{\partial x_{1}}}&\cdots &{\dfrac {\partial f_{m}}{\partial x_{n}}}\end{bmatrix}}}
+\end{equation*}
+More specifically, if $\bf{f}:\mathbb{R}^3\rightarrow\mathbb{R}^3$ is a function taking $(r,s,t)$ to $(x,y,z)$ then the Jacobian is:
+%={\partial(x,y,z) \over \partial(r,s,t)} =
+%{\displaystyle \mathbf {J} ={\begin{bmatrix}{\dfrac {\partial \mathbf {f} }{\partial r}}&\cdots &{\dfrac {\partial \mathbf {f} }{\partial t}}\end{bmatrix}}
+\begin{equation*}
+J
+={\begin{bmatrix}{\partial x \over \partial r} & {\partial x\over \partial s} & {\partial x \over \partial t} \cr 
+		{\partial y \over \partial r} & {\partial y\over \partial s} & {\partial y \over \partial t} \cr 
+		{\partial z \over \partial r} & {\partial z\over \partial s} & {\partial z \over \partial t}\end{bmatrix}}
+\end{equation*}
+
+If the Jacobian at a fixed point has eigenvalues all with negative real part then the point is
+%asymptotically
+stable. If it has at one or more eigenvalues with a positive real part it is unstable\cite{Izhikevich:2007}.
+\section{Code}
+All of the code I have written for this project (around 3000 lines) is open-source and can be accessed, downloaded, modified and reused at \url{https://github.com/joekroese/networks-and-revolution}. Included are some key excerpts.
+\subsection{Compartmental model of revolution}
+This code runs the simulation described in Section \ref{sec:rev-compartment} and creates graphs such as Fig. \ref{fig:rev-traj-default} and Fig. \ref{fig:rev-traj-diff-gamma}.
+\lstinputlisting[language=python]{../Code/illustrative/rev/run.py}
+\subsection{Revolution on network model}
+The following code runs the agent-based model of revolution as described in Section \ref{sec:abm-rev}.
+\lstinputlisting[language=python]{../Code/illustrative/abm-rev-zealot/run-slim.py}
+\lstinputlisting[language=python]{../Code/illustrative/abm-rev-zealot/model.py}
+\subsection{Evolutionary Prisoner's Dilemma on a torus}
+Creates the live visualisation of the evolutionary prisoner's dilemma on a torus as seen in Section \ref{p-d-torus}.
+\lstinputlisting[language=java]{../Code/illustrative/evo_prisoners_dilemma/evo_prisoners_dilemma.pde}
+\lstinputlisting[language=java]{../Code/illustrative/evo_prisoners_dilemma/Game.pde}
+\lstinputlisting[language=java]{../Code/illustrative/evo_prisoners_dilemma/Cell.pde}

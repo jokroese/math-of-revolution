@@ -1,0 +1,138 @@
+\documentclass[a4paper,11pt]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\graphicspath{ {images/} } %where images live
+
+\usepackage{amssymb}	%for extended maths input
+\usepackage{multirow,array}	%for payoff matrices
+\usepackage{tikz}	%for graphics
+\usetikzlibrary{graphs,graphs.standard}	%tikz package for graphs
+\usepackage{amsmath, graphics, setspace} %for mathematica images
+\usepackage{subcaption} %for side-by-side figures
+\usepackage{hyperref}
+\usepackage{url}
+
+\usepackage{csvsimple}
+
+%%make it pretty (headers)
+%\usepackage{fancyhdr}
+%\pagestyle{fancy}
+%\fancyhead[LO]{\sffamily\itshape \thesubsection \thesubsection}
+
+\usepackage{cite}
+
+% for lists
+\usepackage{enumitem}
+
+%for multi-level lists
+\newlist{inparaenum}{enumerate}{2}% allow two levels of nesting in an enumerate-like environment
+\setlist[inparaenum]{nosep}% compact spacing for all nesting levels
+\setlist[inparaenum,1]{label=\alph*.}% labels for top level
+\setlist[inparaenum,2]{label=\alph{inparaenumi}\alph*)}% labels for second level
+
+
+
+\usepackage{mathtools}
+\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
+
+\newcommand\tab[1][0.4cm]{\hspace*{#1}} %add tab function
+
+%including code
+\usepackage{color}
+\usepackage{listings}
+
+\definecolor{codegreen}{rgb}{0.2,0.1,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.4}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+	backgroundcolor=\color{backcolour},   
+	commentstyle=\color{codegreen},
+	keywordstyle=\color{codepurple},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codepurple},
+	basicstyle=\footnotesize,
+	breakatwhitespace=false,         
+	breaklines=true,                 
+	captionpos=b,                    
+	keepspaces=true,                 
+	numbers=left,                    
+	numbersep=5pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=2
+}
+
+\lstset{style=mystyle}
+
+
+%%making the 'lessons' coloured section
+%
+\usepackage[most]{tcolorbox}
+\usepackage{xcolor}
+
+\definecolor{susceptible-colour}{HTML}{F2728C}
+\definecolor{exposed-colour}{HTML}{67B8C7}
+\definecolor{infective-colour}{HTML}{F2728C}
+\definecolor{removed-colour}{HTML}{67B8C7}
+%Susceptible, green, #ADD694
+%Exposed, yellow, #FFCD47
+%Infected, pink, #F2728C
+%Recovered, blue, #67B8C7
+
+\tcbset{
+	frame code={}
+	center title,
+	left=0pt,
+	right=0pt,
+	top=0pt,
+	bottom=0pt,
+	colback=infective-colour!40,
+	colframe=white,
+	width=\dimexpr\textwidth\relax,
+	enlarge left by=0mm,
+	boxsep=5pt,
+	arc=0pt,outer arc=0pt,
+}
+
+%to have the boltzmann wealth model rules list resume after being seperated by another list
+\newcounter{rule}
+
+\newcommand{\reporttitle}{An epidemiological approach to modelling revolution and repression}
+\newcommand{\reportauthor}{Joe Kroese}
+\newcommand{\studentID}{8386741}
+\newcommand{\supervisor}{Dr Mark Muldoon}
+\newcommand{\degreetype}{Mathematics}
+
+
+\begin{document}
+
+\author{Joe Kroese}
+\title{An epidemiological approach to modelling revolution and repression}
+\date{\today}
+
+%\frontmatter
+\include{./TeX_files/title-page}
+%\maketitle
+\tableofcontents
+
+\include{./TeX_files/introduction}
+
+\include{./TeX_files/compartments}
+
+\include{./TeX_files/abms}
+
+\include{./Tex_files/games-on-networks}
+
+\include{./Tex_files/conclusion}
+
+\include{./TeX_files/appendix}
+
+\bibliography{./TeX_files/bibliography2}{}
+\bibliographystyle{ieeetr}
+
+
+\end{document}
